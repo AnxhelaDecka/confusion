@@ -22,17 +22,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
-                </ul>     
+                </ul>
+
                 <span class="navbar-text"?>
-                    <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login
-                    </a>
+                   <a id="loginb"> <span class="fa fa-sign-in"></span> Login  </a>
                 </span>
             </div>       
         </div>
@@ -165,7 +165,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
             <div class="col-12 col-sm align-self-center">
-                <a class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                <a id="reservet" class="btn btn-block nav-link btn-warning">Reserve Table</a>
             </div>
         </div>
         </div>
@@ -349,7 +349,18 @@
                 $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+
+            $("#loginb").click(function(){
+            $('#loginModal').modal('toggle')
+            });
+
+            $("#reservet").click(function(){
+            $('#reserveModal').modal('toggle')
+            });
+
     });
+           
+         
     </script>
     
 </body>
